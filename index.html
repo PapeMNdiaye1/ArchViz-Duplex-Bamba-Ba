@@ -62,6 +62,7 @@
             <img id="Scene-18" src="./Style/Images/Scene-18.jpg">
             <img id="Scene-19" src="./Style/Images/Scene-19.jpg">
             <img id="Scene-20" src="./Style/Images/Scene-20.jpg">
+            <img id="Scene-21" src="./Style/Images/Scene-21.jpg">
 
         </a-assets>
 
@@ -408,8 +409,21 @@
                 rotation="-70.54027190532643 -82.67838279517294 -6.127210661129023"
                 the_dote="Name_of_dote: Dote-19 ; Group_to_activate: Group-19 ; The_rotation: 0">
             </a-plane>
+            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="Dote"
+                material="src: #Arrow-1; transparent:true" position="-0.39703 -1.85724 2.4034"
+                rotation="-85.0647520118928 60.42813977906253 -149.73908201066988"
+                the_dote="Name_of_dote: Dote-21 ; Group_to_activate: Group-21 ; The_rotation: 0">
+            </a-plane>
 
 
+        </a-entity>
+        <!-- Group-21 -->
+        <a-entity scale="0 0 0" rotation="0 180 0" class="groups" id="Group-21" visible="false">
+            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="Dote"
+                material="src: #Arrow-1; transparent:true" position="-0.14588 -1.85724 -3.04364"
+                rotation="-85.48358416013343 -57.373128815424984 -31.7659260776431"
+                the_dote="Name_of_dote: Dote-20 ; Group_to_activate: Group-20 ; The_rotation: 0">
+            </a-plane>
         </a-entity>
 
         <!-- ############################################################ -->
@@ -507,6 +521,9 @@
                                 break;
                             case 'Dote-20':
                                 the_sky.setAttribute('src', '#Scene-20')
+                                break;
+                            case 'Dote-21':
+                                the_sky.setAttribute('src', '#Scene-21')
                                 break;
                             default:
                                 break;
