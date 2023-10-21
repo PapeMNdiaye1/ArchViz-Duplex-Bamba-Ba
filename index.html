@@ -59,6 +59,9 @@
             <img id="Scene-15" src="./Style/Images/Scene-15.jpg">
             <img id="Scene-16" src="./Style/Images/Scene-16.jpg">
             <img id="Scene-17" src="./Style/Images/Scene-17.jpg">
+            <img id="Scene-18" src="./Style/Images/Scene-18.jpg">
+            <img id="Scene-19" src="./Style/Images/Scene-19.jpg">
+            <img id="Scene-20" src="./Style/Images/Scene-20.jpg">
 
         </a-assets>
 
@@ -352,6 +355,56 @@
                 rotation="-82.10771683122262 71.98928216921229 -161.36840637844017"
                 the_dote="Name_of_dote: Dote-16 ; Group_to_activate: Group-16 ; The_rotation: 0">
             </a-plane>
+            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="Dote"
+                material="src: #Arrow-1; transparent:true" position="-1.28233 -1.24896 2.71395"
+                rotation="-82.10771683122262 71.98928216921229 -161.36840637844017"
+                the_dote="Name_of_dote: Dote-18 ; Group_to_activate: Group-18 ; The_rotation: 0">
+            </a-plane>
+
+        </a-entity>
+        <!-- Group-18 -->
+        <a-entity scale="0 0 0" rotation="0 180 0" class="groups" id="Group-18" visible="false">
+            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="Dote"
+                material="src: #Arrow-1; transparent:true" position="0.73742 -1.98296 -3.61791"
+                rotation="-87.06494767469451 -33.99129415393122 -55.193024404952205"
+                the_dote="Name_of_dote: Dote-17 ; Group_to_activate: Group-17 ; The_rotation: 0">
+            </a-plane>
+
+
+            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="Dote"
+                material="src: #Arrow-1; transparent:true" position="-4.87376 -1.49082 -0.63846"
+                rotation="-65.36818188868048 84.15317615983966 -173.9012851891318"
+                the_dote="Name_of_dote: Dote-19 ; Group_to_activate: Group-19 ; The_rotation: 0">
+            </a-plane>
+
+
+        </a-entity>
+        <!-- Group-19 -->
+        <a-entity scale="0 0 0" rotation="0 180 0" class="groups" id="Group-19" visible="false">
+            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="Dote"
+                material="src: #Arrow-1; transparent:true" position="3.99439 -1.24896 1.572"
+                rotation="-70.54027190532643 -82.67838279517294 -6.127210661129023"
+                the_dote="Name_of_dote: Dote-18 ; Group_to_activate: Group-18 ; The_rotation: 0">
+            </a-plane>
+
+
+            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="Dote"
+                material="src: #Arrow-1; transparent:true" position="-3.06335 -1.54306 1.75152"
+                rotation="-73.1197278990054 84.80806691967419 -172.9662180674783"
+                the_dote="Name_of_dote: Dote-20 ; Group_to_activate: Group-20 ; The_rotation: 0">
+            </a-plane>
+
+
+
+        </a-entity>
+        <!-- Group-20 -->
+        <a-entity scale="0 0 0" rotation="0 180 0" class="groups" id="Group-20" visible="false">
+            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="Dote"
+                material="src: #Arrow-1; transparent:true" position="3.99439 -1.24896 1.572"
+                rotation="-70.54027190532643 -82.67838279517292 -6.127210661129023"
+                the_dote="Name_of_dote: Dote-19 ; Group_to_activate: Group-19 ; The_rotation: 0">
+            </a-plane>
+
         </a-entity>
 
         <!-- ############################################################ -->
@@ -440,6 +493,15 @@
                                 break;
                             case 'Dote-17':
                                 the_sky.setAttribute('src', '#Scene-17')
+                                break;
+                            case 'Dote-18':
+                                the_sky.setAttribute('src', '#Scene-18')
+                                break;
+                            case 'Dote-19':
+                                the_sky.setAttribute('src', '#Scene-19')
+                                break;
+                            case 'Dote-20':
+                                the_sky.setAttribute('src', '#Scene-20')
                                 break;
                             default:
                                 break;
