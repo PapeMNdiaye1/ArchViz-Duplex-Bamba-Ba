@@ -27,7 +27,6 @@
 </head>
 
 <body>
-
     <div class="the_description">
         Duplex-Bamba-Ba
     </div>
@@ -40,7 +39,7 @@
 
     <a-scene id="the_scene" the_scene cursor="rayOrigin: mouse">
 
-        <a-scene>
+        <a-assets>
             <img id="Arrow-1" src="./Style/Images/PNG/Arrow-1.png">
             <img id="Scene-0" src="./Style/Images/Scene-0.jpg">
             <img id="Scene-1" src="./Style/Images/Scene-1.jpg">
@@ -73,7 +72,7 @@
             <img id="Scene-27" src="./Style/Images/Scene-27.jpg">
             <img id="Scene-28" src="./Style/Images/Scene-28.jpg">
             <img id="Scene-29" src="./Style/Images/Scene-29.jpg">
-        </a-scene>
+        </a-assets>
 
         <a-entity laser-controls="hand: left"
             raycaster="objects: [data-clickable] ; far: 500; lineColor: #23343b; lineOpacity: 0.5"></a-entity>
@@ -337,10 +336,12 @@
         <!-- Group-15 -->
         <a-entity scale="0 0 0" rotation="0 180 0" class="groups" id="Group-15" visible="false">
             <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="Dote"
-                material="src: #Arrow-1; transparent:true" position="0.25983 -1.24896 3.37492"
+                material="src: #Arrow-1; transparent:true" position="1.17348 -1.24896 3.37492"
                 rotation="-86.29775718701434 -48.889915700718014 -40.270338630769906"
                 the_dote="Name_of_dote: Dote-16 ; Group_to_activate: Group-16 ; The_rotation: 0">
             </a-plane>
+
+
             <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="Dote"
                 material="src: #Arrow-1; transparent:true" position="-0.0268 -1.24896 -3.62386"
                 rotation="-86.75268567634821 46.0176782737272 -132.41226532811865"
