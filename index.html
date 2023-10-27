@@ -572,8 +572,6 @@
                     console.log(Dote_Name);
                     //################################
                     let the_img = document.querySelector(`#Scene-${Dote_Name.substring(5)}`)
-                    console.log(the_img.src);
-                    console.log(the_img.complete);
 
                     async function refreshImage(url) {
                         await fetch(url, { cache: 'reload', mode: 'no-cors' });
@@ -582,17 +580,15 @@
                             .forEach(img => (img.src = url));
                         console.log('image refreshed successfully');
                     }
+
                     if (!the_img.condition) {
                         refreshImage(the_img.src)
-                        console.log('not Ok');
+                        // console.log('not Ok');
+                        alert('Verifier votre conection');
                     } else {
-                        console.log('Ok');
+                        // console.log('Ok');
                     }
-
-
                     //################################
-
-
                     // the_sky.setAttribute('rotation', `0 ${TheRotation} 0`)
 
 
