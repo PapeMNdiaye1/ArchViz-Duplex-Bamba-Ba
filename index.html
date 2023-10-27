@@ -545,13 +545,18 @@
         <!-- ############################################################ -->
         <!-- ############################################################ -->
         <!-- ############################################################ -->
+        <!-- ############################################################ -->
     </a-scene>
     <script>
         let groups = document.querySelectorAll('.groups')
         let the_sky = document.querySelector('#image-360')
         let the_cursor = document.querySelector('.a-mouse-cursor-hover')
         let theBlachHover = document.querySelector('.the_blach_hover')
+        let img_1 = document.querySelector('#Scene-1')
+        // console.log(img_1.src);
 
+
+        //############################################
         AFRAME.registerComponent('the_dote', {
             schema: { Name_of_dote: { type: 'string', default: '#Name', }, Group_to_activate: { type: 'string', default: '#Position', }, The_rotation: { type: 'string', default: '0', } },
 
@@ -564,8 +569,33 @@
                 this.el.setAttribute('event-set__mouseleave', "scale: 0.9 0.9 0.9 ; opacity : 0.5 ")
                 this.el.setAttribute('event-set__mouseenter', "scale: 1.1 1.1 1.1 ; opacity : 1")
                 this.el.addEventListener('click', (theDote) => {
+                    console.log(Dote_Name);
+                    //################################
+                    let the_img = document.querySelector(`#Scene-${Dote_Name.substring(5)}`)
+                    console.log(the_img.src);
+                    console.log(the_img.complete);
+
+                    async function refreshImage(url) {
+                        await fetch(url, { cache: 'reload', mode: 'no-cors' });
+                        document
+                            .querySelectorAll(`img[src='${url}']`)
+                            .forEach(img => (img.src = url));
+                        console.log('image refreshed successfully');
+                    }
+                    if (!the_img.condition) {
+                        refreshImage(the_img.src)
+                        console.log('not Ok');
+                    } else {
+                        console.log('Ok');
+                    }
+
+
+                    //################################
+
 
                     // the_sky.setAttribute('rotation', `0 ${TheRotation} 0`)
+
+
 
                     theBlachHover.style.transitionDelay = '0s , 0s';
                     theBlachHover.style.opacity = '1';
@@ -684,9 +714,17 @@
 
                     }, 1200);
 
+
+
                 });
+
             }
         });
+
+        // function intFunc() {
+        //     console.log(img_1.complete);
+        // }
+        // setInterval(intFunc, 1000)
     </script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
