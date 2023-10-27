@@ -42,12 +42,10 @@
 
         <a-assets>
             <img id="Arrow-1" src="./Style/Images/PNG/Arrow-1.png">
-            <img id="Scene-0" src="./Style/Images/Scene-0.jpg">
             <img id="Scene-1" src="./Style/Images/Scene-1.jpg">
             <img id="Scene-2" src="./Style/Images/Scene-2.jpg">
             <img id="Scene-3" src="./Style/Images/Scene-3.jpg">
             <img id="Scene-15" src="./Style/Images/Scene-15.jpg">
-            <img id="Scene-30" src="./Style/Images/Scene-30.jpg">
             <img id="Scene-14" src="./Style/Images/Scene-14.jpg">
             <img id="Scene-4" src="./Style/Images/Scene-4.jpg">
             <img id="Scene-17" src="./Style/Images/Scene-17.jpg">
@@ -73,6 +71,8 @@
             <img id="Scene-27" src="./Style/Images/Scene-27.jpg">
             <img id="Scene-28" src="./Style/Images/Scene-28.jpg">
             <img id="Scene-29" src="./Style/Images/Scene-29.jpg">
+            <img id="Scene-30" src="./Style/Images/Scene-30.jpg">
+            <img id="Scene-0" src="./Style/Images/Scene-0.jpg">
         </a-assets>
 
         <a-entity laser-controls="hand: left"
@@ -581,12 +581,13 @@
                         console.log('image refreshed successfully');
                     }
 
-                    if (the_img.condition) {
-                        refreshImage(the_img.src)
-                        alert('Verifier votre conection');
-                    } else {
-                        // console.log('Ok');
-                    }
+                    // if (the_img.condition) {
+                    //     console.log('Ok');
+                    // } else {
+                    //     refreshImage(the_img.src)
+                    //     alert('Verifier votre conection');
+                    //     console.log('not Ok');
+                    // }
                     //################################
                     // the_sky.setAttribute('rotation', `0 ${TheRotation} 0`)
 
@@ -707,9 +708,14 @@
                         theBlachHover.style.opacity = '0';
                         theBlachHover.style.height = '0vh';
 
+                        if (the_img.condition) {
+                            console.log('Ok');
+                        } else {
+                            refreshImage(the_img.src)
+                            // alert('Verifier votre conection');
+                            console.log('not Ok');
+                        }
                     }, 1200);
-
-
 
                 });
 
