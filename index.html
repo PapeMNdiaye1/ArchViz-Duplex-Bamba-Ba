@@ -30,6 +30,17 @@
     <div class="the_description">
         Duplex-Bamba-Ba
     </div>
+    <div className='hover_loader_container'>
+        <div className='hover_loader'>
+            <div className="lds-ellipsis">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
 
     <div class="The_Image_Back_Cover">
     </div>
@@ -38,7 +49,7 @@
     </div>
 
     <a-scene id="the_scene" the_scene cursor="rayOrigin: mouse"
-        loading-screen="dotsColor:black; backgroundColor: #f1f1f1 ">
+        loading-screen="dotsColor:black; backgroundColor: #f1f1f1; enabled: false ">
 
         <a-assets>
             <img id="Arrow-1" src="./Style/Images/PNG/Arrow-1.png">
@@ -46,6 +57,7 @@
             <img id="Scene-2" src="./Style/Images/Scene-2.jpg">
             <img id="Scene-3" src="./Style/Images/Scene-3.jpg">
             <img id="Scene-15" src="./Style/Images/Scene-15.jpg">
+            <img id="Scene-30" src="./Style/Images/Scene-30.jpg">
             <img id="Scene-14" src="./Style/Images/Scene-14.jpg">
             <img id="Scene-4" src="./Style/Images/Scene-4.jpg">
             <img id="Scene-17" src="./Style/Images/Scene-17.jpg">
@@ -71,7 +83,6 @@
             <img id="Scene-27" src="./Style/Images/Scene-27.jpg">
             <img id="Scene-28" src="./Style/Images/Scene-28.jpg">
             <img id="Scene-29" src="./Style/Images/Scene-29.jpg">
-            <img id="Scene-30" src="./Style/Images/Scene-30.jpg">
             <img id="Scene-0" src="./Style/Images/Scene-0.jpg">
         </a-assets>
 
@@ -570,6 +581,7 @@
                 this.el.setAttribute('event-set__mouseenter', "scale: 1.1 1.1 1.1 ; opacity : 1")
                 this.el.addEventListener('click', (theDote) => {
                     console.log(Dote_Name);
+
                     //################################
                     let the_img = document.querySelector(`#Scene-${Dote_Name.substring(5)}`)
 
@@ -577,17 +589,15 @@
                         await fetch(url, { cache: 'reload', mode: 'no-cors' });
                         document
                             .querySelectorAll(`img[src='${url}']`)
-                            .forEach(img => (img.src = url));
-                        console.log('image refreshed successfully');
+                            .forEach(the_img => (the_img.src = url));
                     }
 
-                    // if (the_img.condition) {
-                    //     console.log('Ok');
-                    // } else {
-                    //     refreshImage(the_img.src)
-                    //     alert('Verifier votre conection');
-                    //     console.log('not Ok');
-                    // }
+                    if (the_img.condition) {
+                        console.log('Ok');
+                    } else {
+                        refreshImage(the_img.src)
+                        console.log('not Ok');
+                    }
                     //################################
                     // the_sky.setAttribute('rotation', `0 ${TheRotation} 0`)
 
@@ -708,13 +718,6 @@
                         theBlachHover.style.opacity = '0';
                         theBlachHover.style.height = '0vh';
 
-                        if (the_img.condition) {
-                            console.log('Ok');
-                        } else {
-                            refreshImage(the_img.src)
-                            // alert('Verifier votre conection');
-                            console.log('not Ok');
-                        }
                     }, 1200);
 
                 });
@@ -722,10 +725,10 @@
             }
         });
 
-        // function intFunc() {
-        //     console.log(img_1.complete);
-        // }
-        // setInterval(intFunc, 1000)
+        function intFunc() {
+            console.log(img_1.complete);
+        }
+        setInterval(intFunc, 1000)
     </script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
