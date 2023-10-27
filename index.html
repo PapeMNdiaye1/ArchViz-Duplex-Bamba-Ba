@@ -581,9 +581,8 @@
                         console.log('image refreshed successfully');
                     }
 
-                    if (!the_img.condition) {
+                    if (the_img.condition) {
                         refreshImage(the_img.src)
-                        // console.log('not Ok');
                         alert('Verifier votre conection');
                     } else {
                         // console.log('Ok');
