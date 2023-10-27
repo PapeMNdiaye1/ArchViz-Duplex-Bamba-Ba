@@ -149,6 +149,7 @@ html {
 
 .a-enter-vr {
     background: rgba(55, 55, 60, 0);
+    display: none;
 
     .a-enter-vr-button {
         background: rgba(55, 55, 60, 0);
@@ -243,9 +244,9 @@ html {
 
     position: absolute;
     @include cent();
-    border-radius: .2em;
+    // border-radius: .2em;
     bottom: calc(2% + 0em);
-    right: calc(2% + 4em);
+    right: calc(2% + 0em);
     z-index: 10;
     padding: .3em;
     color: #f1f1f1;
@@ -271,6 +272,11 @@ html {
         img {
             transform: translate(0%, .5%);
         }
+    }
+
+    .a-enter-vr {
+        background-image: url('./Images/PNG/VR-icon.png');
+        display: flex;
     }
 
     .the_gallery_container {
@@ -301,11 +307,12 @@ html {
     }
 
     .link_to_archviz {
-        // height: 1.2em;
-        // top: 2%;
         left: 50%;
-        transform: translate(-50%, -5%);
+        transform: translate(0%, 0%);
         filter: invert(0);
-        display: none;
+        // display: none;
+        bottom: 1em;
+        right: none;
+        left: 1em;
     }
 }

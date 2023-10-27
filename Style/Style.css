@@ -186,6 +186,7 @@ html {
 
 .a-enter-vr {
   background: rgba(55, 55, 60, 0);
+  display: none;
 }
 
 .a-enter-vr .a-enter-vr-button {
@@ -310,9 +311,8 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: .2em;
   bottom: calc(2% + 0em);
-  right: calc(2% + 4em);
+  right: calc(2% + 0em);
   z-index: 10;
   padding: .3em;
   color: #f1f1f1;
@@ -340,6 +340,12 @@ html {
   .The_Image img {
     -webkit-transform: translate(0%, 0.5%);
             transform: translate(0%, 0.5%);
+  }
+  .a-enter-vr {
+    background-image: url("./Images/PNG/VR-icon.png");
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .the_gallery_container {
     position: absolute;
@@ -375,11 +381,13 @@ html {
   }
   .link_to_archviz {
     left: 50%;
-    -webkit-transform: translate(-50%, -5%);
-            transform: translate(-50%, -5%);
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
     -webkit-filter: invert(0);
             filter: invert(0);
-    display: none;
+    bottom: 1em;
+    right: none;
+    left: 1em;
   }
 }
 /*# sourceMappingURL=Style.css.map */
