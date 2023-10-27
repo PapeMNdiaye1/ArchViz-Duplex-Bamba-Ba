@@ -30,9 +30,10 @@
     <div class="the_description">
         Duplex-Bamba-Ba
     </div>
-    <div className='hover_loader_container'>
-        <div className='hover_loader'>
-            <div className="lds-ellipsis">
+
+    <div class='hover_loader_container'>
+        <div class='hover_loader'>
+            <div class="lds-ellipsis">
                 <div></div>
                 <div></div>
                 <div></div>
@@ -43,13 +44,15 @@
 
 
     <div class="The_Image_Back_Cover">
+
     </div>
 
     <div class="the_blach_hover">
+
     </div>
 
     <a-scene id="the_scene" the_scene cursor="rayOrigin: mouse"
-        loading-screen="dotsColor:black; backgroundColor: #f1f1f1 ">
+        loading-screen="dotsColor:black; backgroundColor: #f1f1f1;enabled:false ">
 
         <a-assets>
             <img id="Arrow-1" src="./Style/Images/PNG/Arrow-1.png">
@@ -559,6 +562,7 @@
         <!-- ############################################################ -->
     </a-scene>
     <script>
+        let loaderContainer = document.querySelector('.hover_loader_container')
         let groups = document.querySelectorAll('.groups')
         let the_sky = document.querySelector('#image-360')
         let the_cursor = document.querySelector('.a-mouse-cursor-hover')
@@ -725,10 +729,17 @@
             }
         });
 
+        const theInt = setInterval(intFunc, 4000)
+
         function intFunc() {
-            console.log(img_1.complete);
+            if (img_1.complete) {
+                loaderContainer.style.display = "none"
+                console.log(img_1.complete);
+                clearInterval(theInt);
+            } else {
+                console.log(img_1.complete);
+            }
         }
-        setInterval(intFunc, 1000)
     </script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
