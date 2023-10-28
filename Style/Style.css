@@ -277,7 +277,6 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: 'Roboto', sans-serif;
   border-radius: .5em;
   -webkit-transition-duration: .1s;
           transition-duration: .1s;
@@ -301,7 +300,6 @@ html {
   z-index: 10;
   padding: .3em;
   color: #f1f1f1;
-  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   text-decoration: none;
   background-image: url("./Images/PNG/favicon.png");
