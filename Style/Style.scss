@@ -223,23 +223,23 @@ html {
     transition-duration: .1s;
 }
 
-
-
 .link_to_archviz {
     width: 1.5em;
     height: 1.5em;
-    position: absolute;
-    @include cent();
+    position: fixed;
     bottom: calc(2% + 0em);
-    right: calc(2% + 0em);
+    left: calc(2% + 0em);
+    @include cent();
     z-index: 10;
     padding: .3em;
     color: #f1f1f1;
+    // font-family: 'Roboto', sans-serif;
     font-weight: 500;
     text-decoration: none;
     background-image: url('./Images/PNG/favicon.png');
     background-repeat: no-repeat;
     background-size: 100%;
+
 
     &:hover {
         transform: scale(1.1);
